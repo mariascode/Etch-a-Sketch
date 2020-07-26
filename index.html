@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etch A Sketch</title>
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">   <body>
+  <div class="canvasWrap">
+    <canvas width="1600" height="1000" id="etch-a-sketch"></canvas>
+    <div class="buttons">
+      <button class="shake">Shake it!</Canvas></button>
+    </div>
+
+  </div>
+  <script src="./Etch-A-Sketch.js"></script>
+
+  <style>
+    body {
+      min-height: 100vh;
+      max-height: 100vh;
+      display: grid;
+      align-items: center;
+      justify-items: center;
+      background: rgb(238,174,202);
+      background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(205,237,253,1) 100%, rgba(182,220,254,1) 100%);
+      overflow: hidden;
+      background-size: cover;
+    }
+  
+    canvas {
+      border: 10px solid white;  
+      border-radius: px;    
+      box-shadow: 0px 0px 0px 30px #D8F1FD;       
+      /* Set the width and height to half the actual size so it doesn't look pixelated */
+      width: 800px;
+      height: 450px;
+      background: white;
+    }
+
+    canvas.box-shadow{
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    canvas.shake {
+      animation: shake 0.5s linear 1;
+    }
+
+    button {
+      background: #D8F1FD;
+      display: inline block;
+      width: 50%;
+      border: none;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+      color: #054461;
+      margin-top: 50px;
+      font-family: 'Questrial', sans-serif;
+      font-size: 45px;
+      padding: 20px 50px;
+      text-align: center;
+    }
+
+    button:hover {opacity: 0.7}
+
+    .buttons {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    }
+
+
+    @keyframes shake {
+
+      10%,
+      90% {
+        transform: translate3d(-1px, 0, 0);
+      }
+
+      20%,
+      80% {
+        transform: translate3d(2px, 0, 0);
+      }
+
+      30%,
+      50%,
+      70% {
+        transform: translate3d(-4px, 0, 0);
+      }
+
+      40%,
+      60% {
+        transform: translate3d(4px, 0, 0);
+      }
+    }
+  </style>
+</body>
+
+</html>
